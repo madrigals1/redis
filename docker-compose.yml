@@ -8,3 +8,10 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
       - "6379:6379"
+    networks:
+      - database
+
+networks:
+  database:
+    external:
+      name: ${DATABASE_NETWORK}
