@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 
 services:
   redis:
@@ -14,5 +14,5 @@ services:
 
 networks:
   database:
-    external:
-      name: ${DATABASE_NETWORK}
+    name: ${DATABASE_NETWORK}
+    external: true
